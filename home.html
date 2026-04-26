@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>On-Chain DApp Wallet</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="logo">On-Chain<span>Wallet</span></div>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how">How It Works</a>
+        <a href="#contact">Contact</a>
+        <button id="openModal" class="connect-btn">Connect Wallet</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>Manage Your Crypto Seamlessly</h1>
+        <p>Connect your wallet, explore decentralized apps, and control your assets — all in one secure place.</p>
+        <button class="cta-btn">Launch App</button>
+      </div>
+      <div class="hero-image">
+        <div class="wallet-card">
+          <div class="wallet-header"><span>🪙 Wallet Balance</span></div>
+          <div class="wallet-body">
+            <p><strong>2.45 ETH</strong></p>
+            <p class="address">0x2fC...9bE2</p>
+          </div>
+          <div class="wallet-footer">
+            <button class="small-btn">Send</button>
+            <button class="small-btn">Receive</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="features">
+    <div class="container">
+      <h2>Powerful Features</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="icon">🔐</div>
+          <h3>Secure Transactions</h3>
+          <p>All your on-chain operations are end-to-end encrypted and verified on the blockchain.</p>
+        </div>
+        <div class="card">
+          <div class="icon">⚡</div>
+          <h3>Lightning Fast</h3>
+          <p>Optimized for minimal latency and instant wallet connections across multiple chains.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🌐</div>
+          <h3>Multi-Chain Support</h3>
+          <p>Connect and manage assets across Ethereum, BNB Chain, Polygon, and more.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how" class="how">
+    <div class="container">
+      <h2>How It Works</h2>
+      <ol>
+        <li>Connect your wallet (MetaMask, WalletConnect, etc.)</li>
+        <li>Authorize the DApp securely</li>
+        <li>Start sending, swapping, and tracking tokens on-chain</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> On-Chain DApp Wallet. All rights reserved.</p>
+      <div class="socials">
+        <a href="#">Twitter</a>
+        <a href="#">Docs</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Wallet Connect Modal -->
+  <div id="walletModal" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" id="closeModal">×</button>
+      <h3>Connect Your Wallet</h3>
+      <p>Select a wallet provider to continue:</p>
+      <div class="wallet-options">
+        <button class="wallet-option">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/MetaMask_Fox.svg" alt="MetaMask">
+          MetaMask
+        </button>
+        <button class="wallet-option">
+          <img src="https://cryptologos.cc/logos/walletconnect-logo.svg?v=025" alt="WalletConnect">
+          WalletConnect
+        </button>
+        <button class="wallet-option">
+          <img src="https://cryptologos.cc/logos/coinbase-coin-logo.svg?v=025" alt="Coinbase Wallet">
+          Coinbase Wallet
+        </button>
+      </div>
+
+      <div id="connectSuccess" class="success-message">
+        <p>✅ Wallet Connected!</p>
+        <p class="address">0x2fC...9bE2</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const modal = document.getElementById("walletModal");
+    const openBtn = document.getElementById("openModal");
+    const closeBtn = document.getElementById("closeModal");
+    const walletBtns = document.querySelectorAll(".wallet-option");
+    const successMsg = document.getElementById("connectSuccess");
+
+    openBtn.onclick = () => {
+      modal.classList.add("show");
+      successMsg.style.display = "none";
+    };
+    closeBtn.onclick = () => modal.classList.remove("show");
+    window.onclick = (e) => {
+      if (e.target === modal) modal.classList.remove("show");
+    };
+
+    walletBtns.forEach(btn => {
+      btn.onclick = () => {
+        walletBtns.forEach(b => b.style.display = "none");
+        successMsg.style.display = "block";
+      };
+    });
+  </script>
+</body>
+</html>

